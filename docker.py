@@ -1,36 +1,36 @@
-
 import os
 import speech_recognition as sr
 
 while True:
 
     print("\n")
-    os.system("tput setaf 1")
-    print("\t\t\t\t  WELCOME TO DOCKER MENU")
-    print("\t\t\t\t#######################")
-    os.system("tput setaf 4")
+    os.system("tput setaf 2")
+    print("\t\t\t\t\t\t\t\t\t  WELCOME TO DOCKER MENU")
+    print("\t\t\t\t\t\t\t\t#########################################")
+    print("\t\t\t\t\t\t\t\t#########################################")
+    os.system("tput setaf 7")
     print("""
-                                                                                           1. For installing docker
-                                                                                           2. For checking docker is installed
-                                                                                           3. To start docker service
-                                                                                           4. To see the downloaded docker images
-                                                                                           5. For download any docker image
-                                                                                           6. To launch container
-                                                                                           7. To see total running docker container
-                                                                                           8. To stop the container
-                                                                                           9. To delete any docker image
-                                                                                          10. To configure web server in container
-                                                                                          11. To exit from docker menu
+                                                                1. For installing docker
+                                                                2. For checking docker is installed
+                                                                3. To start docker service
+                                                                4. To see the downloaded docker images
+                                                                5. For download any docker image
+                                                                6. To launch container
+                                                                7. To see total running docker container
+                                                                8. To stop the container
+                                                                9. To delete any docker image
+                                                                10. To configure web server in container
+                                                                11. To exit from docker menu
     """)
-    os.system("tput setaf 1")
-    print("\t\t\t\t###################")
-    os.system("tput setaf 4")
+    os.system("tput setaf 2")
+    print("\t\t\t\t\t\t\t\t#########################################")
+    os.system("tput setaf 7")
 
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Please speak anything")
+        print("Start Speaking")
         audio = r.listen(source)
-        print("Your voice is recording please wait")
+        print("Audio Recorded")
 
     ch = r.recognize_google(audio)
     print(ch)
@@ -89,4 +89,5 @@ while True:
          print("Invalid choice")
     input("Enter to run more docker menu...")
     os.system("clear")
+
 
